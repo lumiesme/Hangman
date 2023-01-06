@@ -8,4 +8,5 @@ class Hangman:
 
 if __name__ == '__main__':
     # TODO read commandline db name
+    # mingi todo veel
     Hangman()
