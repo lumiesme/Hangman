@@ -25,7 +25,7 @@ class Model:
         # print(self.new_word)  # siis näeme konsoolis uut nime, mis ta valis. Test
         self.user_word = []
         self.all_user_chars = []  # kantsulud tähendavad, et teeks tühjaks
-        self.counter = 0   # todo is needed or not
+        self.counter = 0
 
         # kõik tähed asendatakse allkriipsuga
         for x in range(len(self.new_word)):
@@ -43,7 +43,9 @@ class Model:
     def get_user_input(self, userinput):
         if userinput:
             user_char = userinput[:1]  # only first letter
-            if user_char.lower() in self.new_word.lower():
+            if (user_char.upper() in self.user_word) or (user_char.upper() in self.all_user_chars):
+                self.counter += 1
+            elif user_char.lower() in self.new_word.lower():
                 self.change_user_input(user_char)  # found letter
             else:  # letter not found
                 self.counter += 1

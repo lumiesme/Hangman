@@ -8,5 +8,5 @@ class Hangman:
 
 if __name__ == '__main__':
     # TODO read commandline db name
-    # mingi todo veel
+    # TODO if letter inputed second time read as error  # peaks näitama aint 1 korra tähte kui mitu kord nt A paned, modelis get_user_inputi juures tee, enne if lauset.
     Hangman()
