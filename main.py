@@ -1,12 +1,16 @@
-from Controller import Controller
+import os.path
 
+from Controller import Controller
+from sys import argv   # read from command line
 
 class Hangman:
 
     def __init__(self):
-        Controller().main()
+        Controller(db_name).main()
 
 if __name__ == '__main__':
-    # TODO read commandline db name
-    # TODO if letter inputed second time read as error  # peaks näitama aint 1 korra tähte kui mitu kord nt A paned, modelis get_user_inputi juures tee, enne if lauset.
+    db_name = None
+    if len(argv) == 2:
+        if os.path.exists(argv[1]):
+            db_name = argv[1]  # new database name from command line
     Hangman()

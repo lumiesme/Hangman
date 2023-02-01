@@ -17,7 +17,7 @@ class Model:
         self.counter = 0  # error counter (wrong letters), loendab valed tähed kokku, pole vaja vist?
         # leaderboard
         self.player_name = 'UNKNOWN'
-        self.leaderboard_file = 'leaderboard.txt'
+        self.leaderboard_file = 'leaderboard_1.txt'
         self.score_data = []  # sisaldab eelneva faili sisu. leaderboard file contents
 
     def start_new_game(self):

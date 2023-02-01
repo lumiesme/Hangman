@@ -35,6 +35,9 @@ class View(Tk):
         self.lbl_error, self.lbl_time, self.lbl_result = self.create_all_labels()
         self.char_input = self.create_input_entry()
 
+        # Bind enter key. Kui ei pane new game ja vajutad liht enter siis tuleb error
+        self.bind('<Return>', lambda event: self.controller.click_btn_send())  # kuna lambdaga siis peaavad btn_send lõpus sulud olema, kui oleks ilma lambdata siis ei oleks sulge lõppu vaja
+
     def main(self):
         self. mainloop()
 
